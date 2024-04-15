@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::after {
+            content: "*";
+        }
+        a:visited {
+            color: green;
+        }
+        button {
+            width: 100px;
+            height: 100px;
+        }
+        button:active {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition: all 1s ease-in;
+        }
+        button:hover {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 인접 형제 선택자 : + 기호를 사용해 인접한 형제 요소 선택 -->
+    <!-- 일반 형제 선택자 : ~  -->
+    <!-- 가상 요소 선택자 : ::before, ::after, ""first-letter, ::first-lin -->
+    <!-- 동적 가상 클래스 선택자 : :hover(마우스 올리는 동작), :active(마우스 클릭) -->
+
+    <h1>?Heading</h1>
+    <a href="https://www.naver.com">네이버</a>
+    <a href="https://www.google.co.kr">구글</a>
+    <a href="https://www.kakao.com">카카오</a>
+    <button>버튼</button>
+</body>
+</html>
