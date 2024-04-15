@@ -15,10 +15,20 @@
     border-radius: 100px;
     background: red;
 }
-.img > img {
-
+.img {
+    position: relative;
+    width: 300px;
+    height: 200px;
 }
-.img > img:hover {
-    transform: translateX(1.2);
-    transition: all 0.3s;
+
+.img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 2s ease; /* 2초 동안 서서히 변화 */
+}
+
+.img:hover img {
+    opacity: 1;
 }

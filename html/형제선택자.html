@@ -24,6 +24,12 @@
         button:hover {
             color: green;
         }
+        input:focus {
+            background-color: red;
+        }
+        input:disabled {
+            background-color: darkgray;
+        }
     </style>
 </head>
 <body>
@@ -31,11 +37,17 @@
     <!-- 일반 형제 선택자 : ~  -->
     <!-- 가상 요소 선택자 : ::before, ::after, ""first-letter, ::first-lin -->
     <!-- 동적 가상 클래스 선택자 : :hover(마우스 올리는 동작), :active(마우스 클릭) -->
+    <!-- 입력 요소 가상 선택자 :  -->
 
     <h1>?Heading</h1>
     <a href="https://www.naver.com">네이버</a>
     <a href="https://www.google.co.kr">구글</a>
     <a href="https://www.kakao.com">카카오</a>
     <button>버튼</button>
+    <label for="in">입력
+    <input type="text" id="in"></label>
+    <label for="in2">입력 비활성화
+        <input type="text" id="in2" disabled>
+    </label>
 </body>
 </html>
