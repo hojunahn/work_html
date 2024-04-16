@@ -1,5 +1,5 @@
 * {
-    font-family: 'Noto Sans KR', 'Roboto', 'Arial', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     color: #fff;
 }
 
@@ -7,8 +7,8 @@
 header {
     position: relative;
     position: fixed;
-    z-index: 2;
     width: 100%;
+    z-index: 1;
     height: 136px;
     display: flex;
     align-items: center;
@@ -20,96 +20,187 @@ header > .nav {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    z-index: 3;
 }
 header > .nav > .logo {
     position: absolute;
     bottom: 0;
 }
-header > .nav > .gnb {
-    width: 25%;
-    left: 50%;
-    transform: translate(-50%);
+.menu_box {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu_div {
+    position: relative;
+    width: 120px;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 100%; /* 부모 요소의 높이를 기준으로 정렬 */
+}
+
+/*  hover_nav */
+
+header > .after_nav {
+    width: 100%;
+    height: 500px;
     position: absolute;
-    margin-right: 20px;
-    bottom: 20%;
+    left: 50%;
+    top: 0;
+    /* background-color: #fff; */
+    transform: translate(-50%);
+}
+
+header > .after_nav > .after_logo {
+    position: absolute;
+    top: 20%;
+    left: 18px;
+}
+.after_nav {
+    /* background-color: blue; */
+    padding: 10px; /* 내부 여백 설정 */
     display: flex;
     justify-content: center;
 }
-header > .nav > .gnb > ul > li {
-    float: left;
-    margin: 0 30px;
-    font-size: 18px;
-    font-weight: 700;
+
+.after_menu_div {
+    display: inline-block; /* 항목을 인라인 블록으로 표시하여 가로로 정렬 */
+     /* 각 항목 사이의 간격 설정 */
+    width: 120px;
+    position: relative;
 }
+.after_menu_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.after_menu_div a {
+    text-decoration: none; /* 링크에 밑줄 제거 */
+    color: red; /* 링크 텍스트 색상 설정 */
+    display: flex;
+    justify-content: center;
+    
+}
+.after_menu_div > a {
+    margin-top: 41px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+.after_menu_div a:hover {
+    color: #007bff; /* 호버시 텍스트 색상 변경 */
+}
+
+.sub_menu {
+    position: absolute; /* 절대 위치 설정 *//* 내부 여백 설정 */
+    top: 20%; /* 부모 요소 하단에 위치하도록 설정 */
+    width: 100%; /* 상위 메뉴와 동일한 너비 설정 */
+}
+.sub_menu > li > a {
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 10px;
+
+}
+
 /* main */
 .main_img {
     overflow: hidden;
     position: relative;
-    z-index: 1;
+    font-size: 18px;
+}
+.main_img  p {
+    margin: 50px 0 80px 0;
 }
 .main_img > img {
     width: 100%;
     height: auto;
     position: relative;
+    z-index: 1;
 }
-.main_img > .slide_img1 {
+.main_img > .slide_img {
     transition: all 2s;
 }
 .main_img > .slide_img1 > .txt_box1 {
     position: absolute;
-    top: 40%;
+    width: 100%;
+    height: 300px;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: red;
     text-align: center;
 }
 .txt_box1 > h2 {
-    font-family: "ENBASKVL", "Malgun Gothic", "sans-serif" !important;
+    font-family: "Sedan", serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 64px;
-    font-weight: 400;
-    letter-spacing: 0;
 }
 
 .main_img > .slide_img2 > .txt_box2 {
     position: absolute;
-    top: 40%;
+    width: 100%;
+    height: 300px;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: red;
     text-align: center;
 }
 .txt_box2 > h2 {
-    font-family: "ENBASKVL", "Malgun Gothic", "sans-serif" !important;
+    font-family: "Sedan", serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 64px;
-    font-weight: 400;
-    letter-spacing: 0;
 }
 .main_img > .slide_img3 > .txt_box3 {
     position: absolute;
-    top: 40%;
+    width: 100%;
+    height: 300px;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: red;
     text-align: center;
 }
 .txt_box3 > h2 {
-    font-family: "ENBASKVL", "Malgun Gothic", "sans-serif" !important;
+    font-family: "Sedan", serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 64px;
-    font-weight: 400;
-    letter-spacing: 0;
 }
 .main_img > .slide_img4 > .txt_box4 {
     position: absolute;
-    top: 40%;
+    width: 100%;
+    height: 300px;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: red;
     text-align: center;
 }
 .txt_box4 > h2 {
-    font-family: "ENBASKVL", "Malgun Gothic", "sans-serif" !important;
+    font-family: "Sedan", serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 64px;
-    font-weight: 400;
-    letter-spacing: 0;
+}
+.main_img .view {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #fff;
+}
+.main_img .view:hover {
+    background-color: #8f4848;
+    transform: translateY(1.1);
+    transition: all 1s;
+}
+.main_img .view span {
+    line-height: 40px;
+    font-size: 16px;
 }
