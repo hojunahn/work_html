@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px; /* 슬라이더의 너비 */
+            overflow: hidden; /* 넘치는 내용을 숨김 */
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.3s ease; /* 슬라이드 애니메이션 설정 */
+        }
+
+        .slide {
+            flex: 0 0 100%; /* 슬라이드의 너비 설정 */
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="slider" class="slider">
+          <!-- 슬라이드 될 내용들 -->
+          <div class="slide">Slide 1</div>
+          <div class="slide">Slide 2</div>
+          <div class="slide">Slide 3</div>
+        </div>
+        <button id="prevButton">이전</button>
+        <button id="nextButton">다음</button>
+      </div>
+</body>
+</html>
+<script>
+    const slider = document.getElementById('slider');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+let slideIndex = 0;
+
+prevButton.addEventListener('click', () => {
+  slideIndex = Math.max(slideIndex - 1, 0);
+  moveSlider();
+});
+
+nextButton.addEventListener('click', () => {
+  slideIndex = Math.min(slideIndex + 1, slider.children.length - 1);
+  moveSlider();
+});
+
+function moveSlider() {
+  const slideWidth = slider.children[0].offsetWidth;
+  const newPosition = -slideIndex * slideWidth;
+  slider.style.transform = `translateX(${newPosition}px)`;
+}
+</script>

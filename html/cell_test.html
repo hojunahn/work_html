@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            z-index: 1;
+            position: relative;
+            width: 100%; /* 부모 요소의 너비 */
+            height: 953px;
+            overflow: hidden; /* 넘치는 내용을 숨김 */
+            border: 1px solid #000;
+            background-image: url('../img/hoverpage_main.jpg'); /* 기본 배경화면 설정 */
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.3s ease; /* 배경화면 전환 애니메이션 설정 */
+        }
+
+        .cell {
+            width: 100%;
+            display: flex;
+            height: 100%;
+            transition: transform 0.3s ease; /* 슬라이드 애니메이션 설정 */
+        }
+
+        .txt_area {
+            z-index: 2;
+            flex: 0 0 25%;
+            height: 100%;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #555;
+            box-sizing: border-box;
+            transition: background-image 0.3s ease; /* 배경화면 전환 애니메이션 설정 */
+        }
+
+        .txt_area1:hover {
+            background-image: url('../img/hoverpage1.jpg');
+        }
+
+        .txt_area2:hover {
+            background-image: url('../img/hoverpage2.jpg');
+        }
+
+        .txt_area3:hover {
+            background-image: url('../img/hoverpage3.jpg');
+        }
+
+        .txt_area4:hover {
+            background-image: url('../img/hoverpage4.jpg');
+        }
+
+        .txt_area5:hover {
+            background-image: url('../img/hoverpage5.jpg');
+        }
+
+        .txt_area6:hover {
+            background-image: url('../img/hoverpage6.jpg');
+        }
+
+        .txt_area7:hover {
+            background-image: url('../img/hoverpage7.jpg');
+        }
+
+        .txt_area8:hover {
+            background-image: url('../img/hoverpage8.jpg');
+        }
+
+        .button-container {
+            z-index: 3;
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+        }
+        .button {
+            margin-top: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="cell" class="cell">
+            <!-- 슬라이드 될 내용들 -->
+            <div class="txt_area">Slide 1</div>
+            <div class="txt_area">Slide 2</div>
+            <div class="txt_area">Slide 3</div>
+            <div class="txt_area">Slide 4</div>
+            <div class="txt_area">Slide 5</div>
+            <div class="txt_area">Slide 6</div>
+            <div class="txt_area">Slide 7</div>
+            <div class="txt_area">Slide 8</div>
+        </div>
+        <div class="button-container"> <!-- 버튼을 슬라이드 영역에 추가 -->
+            <button id="prevButton">이전</button>
+            <button id="nextButton">다음</button>
+        </div>
+    </div>
+
+    <script>
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const cell = document.getElementById('cell');
+        const slideWidth = cell.children[0].offsetWidth;
+        const slidesPerView = 4; // 한 화면에 보여질 슬라이드 개수
+        const totalSlides = cell.children.length;
+        let currentSlide = 0;
+
+        prevButton.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                moveSlider();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentSlide < totalSlides - slidesPerView) {
+                currentSlide++;
+                moveSlider();
+            }
+        });
+
+        function moveSlider() {
+            const newPosition = -currentSlide * slideWidth;
+            cell.style.transform = `translateX(${newPosition}px)`;
+
+      // 마지막 슬라이드에 도달하면 다음 버튼 비활성화
+      if (currentSlide >= totalSlides - slidesPerView) {
+        nextButton.disabled = true;
+      } else {
+        nextButton.disabled = false;
+      }
+
+      // 첫 번째 슬라이드에 도달하면 이전 버튼 비활성화
+      if (currentSlide <= 0) {
+        prevButton.disabled = true;
+      } else {
+        prevButton.disabled = false;
+      }
+    }
+
+    // 초기화
+    moveSlider();
+
+
+    const container = document.querySelector('.container');
+    container.addEventListener('mouseout', () => {
+    container.style.backgroundImage = `url('../img/hoverpage_main.jpg')`;
+    });
+
+    const txtAreas = document.querySelectorAll('.txt_area');
+
+    txtAreas.forEach((txtArea, index) => {
+        txtArea.addEventListener('mouseover', () => {
+        container.style.backgroundImage = `url('../img/hoverpage${index + 1}.jpg')`;
+    });
+});
+
+        
+    </script>
+</body>
+</html>
+
+
