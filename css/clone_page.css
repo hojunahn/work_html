@@ -43,9 +43,7 @@ header > .nav > .logo {
     height: 100%; /* 부모 요소의 높이를 기준으로 정렬 */
 }
 
-.menu_div > a {
-    height: 250px;
-}
+
 /*  hover_nav */
 
 header > .after_nav {
@@ -108,7 +106,7 @@ header > .after_nav > .after_logo {
     margin-bottom: 10px;
 
 }
-.menu_div:hover + .menu_div > a {
+.menu_div:hover .after_nav{
     display: block;
 }
 
@@ -154,10 +152,10 @@ header > .after_nav > .after_logo {
     font-style: normal;
     font-size: 64px;
 }
-.main_img p {
+.txt_box p {
     margin: 50px 0 80px 0;
 }
-.main_img .view {
+.txt_box .view {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -166,12 +164,14 @@ header > .after_nav > .after_logo {
     height: 40px;
     border: 1px solid #fff;
 }
-.main_img .view:hover {
-    background-color: #8f4848;
-    transform: translateY(1.1);
+.txt_box .view:hover {
+    background-color: #a58383;
     transition: all 1s;
+    border: none;
+    transform: translate(1.1);
+    border-radius: 5px;
 }
-.main_img .view span {
+.txt_box .view span {
     line-height: 40px;
     font-size: 16px;
 }
