@@ -109,25 +109,27 @@ header > .after_nav > .after_logo {
     display: block;
 }
 
-/* main */
-.main_img {
-    overflow: hidden;
+/* main_img_slide */
+.slider {
+    width: 100%; /* 원하는 슬라이드의 최대 너비 설정 */
+    overflow: hidden; /* 슬라이드 밖의 내용 숨기기 */
+    position: relative; /* 상대적 위치 */
+}
+.slide_box {
+    display: flex; /* 슬라이드를 가로로 나열 */
+    animation: slide-animation 20s infinite; /* 애니메이션 적용, 무한 반복 */
+}
+.slide {
+    flex: 0 0 100%; /* flexbox 아이템의 너비를 컨테이너의 100%로 설정 */
+    transition: transform 1s ease; /* 부드러운 변환 효과 */
+    display: flex; /* flexbox 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    background-color: #ccc; /* 배경 색상 */
+    color: white; /* 글자 색상 */
     position: relative;
-    font-size: 18px;
 }
-.main_img  p {
-    margin: 50px 0 80px 0;
-}
-.main_img > img {
-    width: 100%;
-    height: auto;
-    position: relative;
-    z-index: 1;
-}
-.main_img > .slide_img {
-    transition: all 2s;
-}
-.main_img > .slide_img1 > .txt_box1 {
+.slide > .txt_box {
     position: absolute;
     width: 100%;
     height: 300px;
@@ -135,54 +137,9 @@ header > .after_nav > .after_logo {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-}
-.txt_box1 > h2 {
-    font-family: "Sedan", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 64px;
-}
 
-.main_img > .slide_img2 > .txt_box2 {
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
 }
-.txt_box2 > h2 {
-    font-family: "Sedan", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 64px;
-}
-.main_img > .slide_img3 > .txt_box3 {
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-.txt_box3 > h2 {
-    font-family: "Sedan", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 64px;
-}
-.main_img > .slide_img4 > .txt_box4 {
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-.txt_box4 > h2 {
+.txt_box > h2 {
     font-family: "Sedan", serif;
     font-weight: 600;
     font-style: normal;
@@ -205,4 +162,12 @@ header > .after_nav > .after_logo {
 .main_img .view span {
     line-height: 40px;
     font-size: 16px;
+}
+
+@keyframes slide-animation {
+    0%, 20% { transform: translateX(0); } /* 0초부터 4초까지 첫 번째 이미지 */
+    20%, 40% { transform: translateX(-100%); } /* 5초부터 9초까지 두 번째 이미지 */
+    40%, 60% { transform: translateX(-200%); } /* 10초부터 14초까지 세 번째 이미지 */
+    60%,80% { transform: translateX(-300%); } /* 15초부터 19초까지 네 번째 이미지 */
+    80%,100% { transform: translateX(0); } /* 20초에 다시 첫 번째 이미지로 리셋 */
 }
