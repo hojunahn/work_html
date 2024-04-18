@@ -3,6 +3,10 @@
     color: #fff;
 }
 
+.hidden {
+    display: none;
+}
+
 /* header */
 header {
     position: relative;

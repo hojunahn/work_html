@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/clone_page.css">
 </head>
 <body>
-    <div id="wrap">
+    <div id="wrap" class="hidden">
         <header>
             <div class="nav">
                 <div class="logo">
@@ -96,10 +96,13 @@
             </div>
         </div>
     </div>
-    </div>
     <div class="container">
         <div id="cell" class="cell">
-            <div class="txt_area"><div class="txt_box"><h2></h2></div></div>
+            <div class="txt_area">
+                <div class="txt_box">
+                    <h2></h2>
+                </div>
+            </div>
             <div class="txt_area"><div class="txt_box"><h2></h2></div></div>
             <div class="txt_area"><div class="txt_box"><h2></h2></div></div>
             <div class="txt_area"><div class="txt_box"><h2></h2></div></div>
@@ -113,6 +116,7 @@
             <button id="nextButton">다음</button>
         </div>
     </div>
+  </div>
 </body>
 </html>
 <script>
@@ -200,6 +204,16 @@
     txtAreas.forEach((txtArea, index) => {
         txtArea.addEventListener('mouseover', () => {
         container.style.backgroundImage = `url('../img/hoverpage${index + 1}.jpg')`;
+    });
+});
+
+// 화면 요소 늦게 떨어지게 하는 스크립트
+document.addEventListener("DOMContentLoaded", function() {
+    var delayedElements = document.querySelectorAll(".delayed-element");
+    delayedElements.forEach(function(element) {
+        setTimeout(function() {
+            element.classList.add("visible");
+        }, 3000); // 각 요소마다 3초의 딜레이
     });
 });
 </script>
