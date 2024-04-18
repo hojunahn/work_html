@@ -3,10 +3,6 @@
     color: #fff;
 }
 
-.hidden {
-    display: none;
-}
-
 /* header */
 header {
     position: relative;
@@ -16,7 +12,6 @@ header {
     height: 136px;
     display: flex;
     align-items: center;
-    
 }
 header > .nav {
     width: 92%;
@@ -225,6 +220,7 @@ header > .after_nav > .after_logo {
     border-color: rgb(255, 255, 255,0.1);
     box-sizing: border-box;
     transition: background-image 1s ease; /* 배경화면 전환 애니메이션 설정 */
+    cursor: pointer;
 }
 .txt_area:hover {
     background-color: rgba(165, 102, 102, 0.8);
