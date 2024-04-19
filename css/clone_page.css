@@ -396,9 +396,8 @@ header > .after_nav > .after_logo {
     border: 1px solid #fff;
     margin-right: 10px;
 }
-.table_cell .list_box_set .list_box
-.table_cell > .center_box {
+
+.table_cell .center_box {
     position: absolute;
-    width: 100px;
-    height: 200px;
+    
 }
