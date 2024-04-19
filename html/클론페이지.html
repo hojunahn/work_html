@@ -285,7 +285,7 @@
             <div class="list_box">
                 <div class="h2_box">
                     <img src="../img/list_icon.png" alt="">
-                    <h3>분양 예정<br>고객님이시라면?</h3>
+                    <p>분양 예정<br>고객님이시라면?</p>
                 </div>
                 <div class="table_txt">
                     <a href="">청약가이드</a>
@@ -295,7 +295,7 @@
             <div class="list_box">
                 <div class="h2_box">
                     <img src="../img/list_icon2.png" alt="">
-                    <h3>계약중인<br>고객님이시라면?</h3>
+                    <p>계약중인<br>고객님이시라면?</p>
                 </div>
                 <div class="table_txt">
                     <a href="">계약단지 바로가기</a>
@@ -306,7 +306,7 @@
             <div class="list_box">
                 <div class="h2_box">
                     <img src="../img/list_icon3.png" alt="">
-                    <h3>롯데캐슬 입주<br>고객님이시라면?</h3>
+                    <p>롯데캐슬 입주<br>고객님이시라면?</p>
                 </div>
                 <div class="table_txt">
                     <a href="">입주가이드</a>
@@ -315,9 +315,28 @@
             </div>
         </div>
         <div class="center_box">
-            <h2>SERBICE</h2>
+            <p class="h2_p">SERBICE</p>
             <p>고객센터 1688-5500</p>
-            <a href="">고객문의</a>
+            <a class="cnt_btn" href="">고객문의</a>
+        </div>
+    </div>
+    <div class="fot_box">
+        <div class="left_fot">
+            <div class="fot_logo">
+                <a href=""><img src="../img/footer-logo.png" alt=""></a>
+            </div>
+            <p class="right_eng">© Lotte Engineering & Construction. all right reserved.</p>
+        </div>
+        <div class="right_fot">
+            <div class="infor_fot">
+                <p>개인정보처리방침 <span>|</span> 고객센터 1688-5500</p>
+            </div>
+            <a class="fot_btn" href="">FAMILY SITE</a>
+            <div class="fot_nav">
+                <a href="" class="f_img"><img src="../img/footer_img1.png" alt=""></a>
+                <a href="" class="s_img"><img src="../img/footer_img2.jpg" alt=""></a>
+                <a href="" class="t_img"><img src="../img/footer_img3.png" alt=""></a>
+            </div>
         </div>
     </div>
   </div>
@@ -342,9 +361,8 @@
                 }
             }, 300);
         });
-
         // after_nav에서 호버가 떨어질 때 숨김 처리
-        afterNav.addEventListener('mouseleave', () => {
+            afterNav.addEventListener('mouseleave', () => {
             afterNav.style.display = 'none';
         });
     });
@@ -355,7 +373,7 @@
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 const cell = document.getElementById('cell');
-const slideWidth = cell.children[0].offsetWidth;
+const slideWidth = cell.children[0].offsetWidth;    
 const slidesPerView = 4; // 한 화면에 보여질 슬라이드 개수
 const totalSlides = cell.children.length;
 let currentSlide = 0;
