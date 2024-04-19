@@ -368,14 +368,10 @@
     });
 }); 
 
-
-  // container 화면 버튼 슬라이드 
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 const cell = document.getElementById('cell');
-const slideWidth = cell.children[0].offsetWidth;    
-const slidesPerView = 4; // 한 화면에 보여질 슬라이드 개수
-const totalSlides = cell.children.length;
+let totalSlides = cell.children.length;
 let currentSlide = 0;
 
 prevButton.addEventListener('click', (event) => {
@@ -388,29 +384,35 @@ prevButton.addEventListener('click', (event) => {
 
 nextButton.addEventListener('click', (event) => {
     event.preventDefault();
-    if (currentSlide < totalSlides - slidesPerView) {
+    if (currentSlide < totalSlides - 4) {
         currentSlide++;
         moveSlider();
     }
 });
 
-// 마지막 슬라이드에 도달하면 다음 버튼 비활성화
+// 슬라이드 이동 함수
 function moveSlider() {
+    const slideWidth = calculateSlideWidth();
     const newPosition = -currentSlide * slideWidth;
     cell.style.transform = `translateX(${newPosition}px)`;
 
-    if (currentSlide >= totalSlides - slidesPerView) {
+    // 버튼 활성/비활성 설정
+    if (currentSlide >= totalSlides - 4) {
         nextButton.classList.add('disabled');
     } else {
         nextButton.classList.remove('disabled');
     }
 
-    // 첫 번째 슬라이드에 도달하면 이전 버튼 비활성화
     if (currentSlide <= 0) {
         prevButton.classList.add('disabled');
     } else {
         prevButton.classList.remove('disabled');
     }
+}
+
+// 슬라이드 너비 계산
+function calculateSlideWidth() {
+    return cell.clientWidth / 4; // 4는 slidesPerView 값
 }
 
 // 초기화

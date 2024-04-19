@@ -16,6 +16,7 @@ html,body {
    }
 #wrap {
       -ms-overflow-style: none;
+      
 }
 #wrap::-webkit-scrollbar{
      display:none;
@@ -156,7 +157,7 @@ header > .after_nav > .after_logo {
 }
 .slide img { 
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 .slide > .txt_box {
     position: absolute;
@@ -235,6 +236,7 @@ header > .after_nav > .after_logo {
 }
 
 .txt_area {
+    flex-wrap: wrap;
     z-index: 2;
     flex: 0 0 25%;
     position: relative;
@@ -559,6 +561,17 @@ header > .after_nav > .after_logo {
 }
 .fot_box .right_fot .fot_nav > a {
     margin: 0 15px;
+}
+
+
+
+
+
+
+/* 미디어 쿼리 */
+
+@media screen and (max-width: 1500px) {
+    
 }
 
 
