@@ -370,7 +370,6 @@ header > .after_nav > .after_logo {
 .table_cell {
     position: relative;
     display: flex;
-    width: 100%;
     height: 953px;
     background-color: red;
     
@@ -390,5 +389,8 @@ header > .after_nav > .after_logo {
     margin-right: 10px;
 }
 .table_cell .list_box_set .list_box
-.table_cell .number_box {
+.table_cell > .center_box {
+    position: absolute;
+    width: 100px;
+    height: 200px;
 }
