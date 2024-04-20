@@ -413,7 +413,7 @@ header > .after_nav > .after_logo {
     min-width: 250px;
     background-color: #fff;
     margin: 0 10px;
-    transition: all 0.8s ease-in;
+    transition: all 0.5s ease-in;
     
 }
 .table_cell .list_box_set .list_box > .h2_box {
@@ -543,6 +543,13 @@ header > .after_nav > .after_logo {
     border-color: rgb(255, 255, 255, 0.5);
     transition: all 0.5s ease-in;
 }
+.fot_box .right_box .fot_btn:hover {
+    transform: translate(1.1);
+    border-radius: 8px;
+    background-color: #916a6a;
+    color: #fff;
+    border: none;
+}
 .fot_box .fot_nav {
     position: absolute;
     bottom: 20%;
@@ -554,7 +561,6 @@ header > .after_nav > .after_logo {
 
 /* 미디어 쿼리 */
 
-/* 화면 너비가 768px 이하일 때, 3개의 div만 보이도록 설정 */
 @media screen and (max-width: 1700px) {
     .txt_area {
         flex: 0 0 33.33%;
@@ -609,7 +615,6 @@ header > .after_nav > .after_logo {
     }
 }
 
-/* 화면 너비가 480px 이하일 때, 2개의 div만 보이도록 설정 */
 @media screen and (max-width: 1300px) {
     .txt_area .txt_box2 {
         display: block;
@@ -688,7 +693,6 @@ header > .after_nav > .after_logo {
     }
     
 }
-/* 화면 너비가 320px 이하일 때, 1개의 div만 보이도록 설정 */
 @media screen and (max-width: 770px) {
     .txt_area {
         flex: 0 0 100%;

@@ -1,4 +1,4 @@
-
+/* header */
 header {
     position: relative;
     position: fixed;
@@ -14,7 +14,9 @@ header > .nav {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    transition: all 1s ease;
 }
+
 header > .nav > .logo {
     position: absolute;
     bottom: 0;
