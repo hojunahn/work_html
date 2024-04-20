@@ -39,7 +39,9 @@ header > .nav {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    transition: all 1s ease;
 }
+
 header > .nav > .logo {
     position: absolute;
     bottom: 0;
@@ -609,25 +611,24 @@ header > .after_nav > .after_logo {
 
 /* 화면 너비가 480px 이하일 때, 2개의 div만 보이도록 설정 */
 @media screen and (max-width: 1300px) {
+    .txt_area .txt_box2 {
+        display: block;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
     .slide .txt_box > h2 {
         font-size: 44px;
     }
     .slide .txt_box > p {
         font-size: 15px;
     }
-    .menu_box {
-        display: none;
-    }
     .txt_area {
         flex: 0 0 50%;
     }
-    .txt_area .txt_box2 {
-        display: block;
+    .menu_box {
+        display: none;
     }
-    
-}
-@media screen and (max-width: 1000px) {
-    
     .fot_box {
         position: relative;
         background-color: #424242;
