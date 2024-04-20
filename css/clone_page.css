@@ -656,7 +656,6 @@ header > .after_nav > .after_logo {
         right: 5%;
         width: 28%;
         min-width: 530px;
-    
         justify-content: space-between;
     }
     .fot_box .right_box > p {
@@ -693,52 +692,61 @@ header > .after_nav > .after_logo {
     .txt_area {
         flex: 0 0 100%;
     }
-    .table_cell .list_box_set {
-        width: 80%;
-        left: 50%;
-        top: 40%;
-        transform: translate(-50%);
+    .table_cell {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 999;
+        text-align: center; 
     }
-    .table_cell .list_box_set .list_box {
-        width: 25%;
-        height: 85%;
-        object-fit: cover;
-    }
-    .table_cell .list_box_set .list_box > img {
-        width: 80%;
-        height: 80%;
-    }
-    .table_cell .list_box_set .list_box .h2_box > p {
-        font-size: 25px;
-    }
-    .table_cell .list_box_set .list_box .table_txt > a {
-        font-size: 15px;
+    .list_box_set {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .table_cell .center_box {
-        width: 100%;
+        position: absolute;
+        width: 95%;
         height: 25%;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%);
+        top: 5%;
         text-align: center;
     }
-    .table_cell .center_box .h2_p {
-        left: 50%;
-        transform: translate(-50%);
-        font-size: 50px;
+    .table_cell .list_box_set {
+        width: 90%;
+        height: 75%;
+        top: 25%;
     }
-    .table_cell .center_box > p {
-        font-size: 20px;
+    .table_cell .list_box_set .list_box {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 33.33%;
+        object-fit: cover;
+        margin-bottom: 20px;
+
+    }
+    .table_cell .list_box_set .list_box .h2_box {
+        left: 20%;
+        width: 30%;
+    }
+    .table_cell .list_box_set .list_box .table_txt {
+        position: absolute;
+        top: 40%;
+        width: 40%;
+        right: 0;
+        transform: translate(0);
+
+    }
+    .table_cell .list_box_set .list_box .h2_box > p {
+        font-size: 18px;
+    }
+    .table_cell .list_box_set .list_box .table_txt > a {
+        font-size: 14px;
+    }
+    .fot_box .right_box {
         top: 30%;
-        left: 50%;
-        transform: translate(-50%);
-    } 
-    .table_cell .center_box .cnt_btn {
-        left: 50%;
-        bottom: 25%;
-        transform: translate(-50%);
     }
-}
 }
 
 
