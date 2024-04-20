@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/clone_page.css">
-    <link rel="stylesheet" href="../css/clone_header.css">
+    <!-- <link rel="stylesheet" href="../css/clone_header.css">
     <link rel="stylesheet" href="../css/clone_slider.css">
     <link rel="stylesheet" href="../css/clone.container.css">
     <link rel="stylesheet" href="../css/clone_table.css">
-    <link rel="stylesheet" href="../css/clone_footer.css">
+    <link rel="stylesheet" href="../css/clone_footer.css"> -->
 </head>
 <body>
     <div id="wrap">
@@ -326,23 +326,20 @@
         </div>
     </div>
     <div class="fot_box">
-        <div class="left_fot">
             <div class="fot_logo">
                 <a href=""><img src="../img/footer-logo.png" alt=""></a>
             </div>
-            <p class="right_eng">© Lotte Engineering & Construction. all right reserved.</p>
-        </div>
-        <div class="right_fot">
-            <div class="infor_fot">
-                <p>개인정보처리방침 <span>|</span> 고객센터 1688-5500</p>
-            </div>
-            <a class="fot_btn" href="">FAMILY SITE</a>
+            <p class="left_eng">© Lotte Engineering & Construction. all right reserved.</p>
+                <div class="right_box">
+                    <p>개인정보처리방침</p><p>|</p><p>고객센터 1688-5500</p>
+                <a class="fot_btn" href="">FAMILY SITE</a>
+                </div>
             <div class="fot_nav">
                 <a href="" class="f_img"><img src="../img/footer_img1.png" alt=""></a>
                 <a href="" class="s_img"><img src="../img/footer_img2.jpg" alt=""></a>
                 <a href="" class="t_img"><img src="../img/footer_img3.png" alt=""></a>
             </div>
-        </div>
+        
     </div>
   </div>
 </body>
@@ -373,7 +370,7 @@
     });
 }); 
 
-const prevButton = document.getElementById('prevButton');
+prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 const cell = document.getElementById('cell');
 let totalSlides = cell.children.length;
