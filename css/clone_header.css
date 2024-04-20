@@ -1,0 +1,105 @@
+
+header {
+    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 136px;
+    display: flex;
+    align-items: center;
+}
+header > .nav {
+    width: 92%;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+header > .nav > .logo {
+    position: absolute;
+    bottom: 0;
+}
+.menu_box {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu_div {
+    /* background-color: red; */
+    position: relative;
+    width: 120px;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center;
+    height: 100%; /* 부모 요소의 높이를 기준으로 정렬 */
+}
+
+
+/*  hover_nav */
+
+header > .after_nav {
+    display: none;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: #fff;
+    transform: translate(-50%);
+     
+}
+
+header > .after_nav > .after_logo {
+    position: absolute;
+    top: 12.4%;
+    left: 4.4%;
+}
+
+.after_menu_div {
+    display: inline-block; /* 항목을 인라인 블록으로 표시하여 가로로 정렬 */
+    width: 120px;
+    position: relative;
+    /* background-color: red; */
+}
+.after_menu_box {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+}
+.after_menu_div a {
+    display: flex;
+    justify-content: center;
+    
+}
+.after_menu_div > a {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+.after_menu_div a:hover {
+    color: #007bff; /* 호버시 텍스트 색상 변경 */
+}
+
+.sub_menu {
+    margin-top: 50px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    
+}
+.sub_menu > li > a {
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 10px;
+
+}
+.menu_div:hover .after_nav{
+    display: block;
+}

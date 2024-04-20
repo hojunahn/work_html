@@ -1,0 +1,107 @@
+/* table_cell */
+.table_cell {
+    position: relative;
+    display: flex;
+    height: 100vh; /* 전체 화면 높이에 딱 맞게 설정 */
+    background-color: #ebebeb;
+    
+
+}
+.table_cell .list_box_set {
+    display: flex;
+    position: absolute;
+    width: 55%;
+    height: 60%;
+    left: 8%;
+    top: 20%;
+    align-items: center;
+}
+.table_cell .list_box_set .list_box:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.2);
+}
+.table_cell .list_box_set .list_box {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+    margin-right: 20px;
+    transition: all 0.8s ease-in;
+    
+}
+.table_cell .list_box_set .list_box > .h2_box {
+    position: absolute;
+    width: 90%;
+    left: 54%;
+    transform: translate(-50%);
+    top: 14%;
+}
+.table_cell .list_box_set .list_box > .h2_box > p {
+    font-size: 30px;
+    font-family: 'Malgun Gothic', sans-serif;
+    font-weight: 200;
+    margin-top: 20px;
+    color: #666;
+}
+
+.table_cell .list_box_set .list_box .table_txt {
+    position: absolute;
+    width: 80%;
+    height: 25%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.table_cell .list_box_set .list_box .table_txt > a {
+    display: block;
+    color: #a3a3a3;
+}
+.table_cell .center_box {
+    display: flex;
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    right: 8%;
+    top: 35%;
+
+}
+.table_cell .center_box > .h2_p {
+    position: absolute;
+    right: 2%;
+    top: 0;
+    font-family: "Malgun Gothic", sans-serif;
+    color: #444;
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+.table_cell .center_box > p {
+    position: absolute;
+    color: #666;
+    font-family: "Malgun Gothic", sans-serif;
+    font-size: 24px;
+    top: 25%;
+    font-weight: 100;
+    right: 3%;
+}
+.table_cell .center_box > .cnt_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 18%;
+    right: 3%;
+    border: 1px solid #000;
+    width: 98px;
+    height: 40px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.5s ease-in;
+}
+.table_cell .center_box > .cnt_btn:hover {
+    transform: translate(1.1);
+    border-radius: 8px;
+    background-color: #916a6a;
+    color: #fff;
+    border: none;
+}
